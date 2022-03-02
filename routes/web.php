@@ -1,6 +1,6 @@
 <?php
 
-use Inertia\Inertia;
+use App\Http\Controllers\OrdersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome');
+Route::group([
+    'middleware' => [], // currently, not handling users, assuming test is for orders front/back-ends
+    'prefix' => '',
+], function () {
+    Route::get('/', [OrdersController::class, 'index'])->name('orders.index');
 });
