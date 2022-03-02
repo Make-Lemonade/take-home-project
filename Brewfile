@@ -1,0 +1,22 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "nicoverbruggen/cask"
+brew "openldap"
+brew "curl"
+brew "dnsmasq", restart_service: true
+brew "webp"
+brew "python@3.9"
+brew "libevent"
+brew "libiconv"
+brew "mysql@5.7", restart_service: true
+brew "nginx"
+brew "php"
+brew "php@7.2"
+brew "php@7.3"
+brew "php@7.4"
+brew "python@3.8"
+brew "redis", restart_service: true
+brew "wimlib"
+cask "phpmon"
